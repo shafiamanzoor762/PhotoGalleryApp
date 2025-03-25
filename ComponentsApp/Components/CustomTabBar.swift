@@ -35,10 +35,14 @@ enum Defs {
     static let backgroundColor = Color.white
     //static let backgroundColor = Color(red: 234/255, green: 224/255, blue: 213/255)
     
+    ///SEE GREEN
     //static let seeGreenColor = Color(red: 13/255, green: 96/255, blue: 104/255)
-    static let seeGreenColor = Color(red: 139/255, green: 134/255, blue: 227/255)
     //static let lightSeeGreenColor = Color(red: 132/255, green: 197/255, blue: 205/255)
+    
+    ///PURPLE
+    static let seeGreenColor = Color(red: 139/255, green: 134/255, blue: 227/255)
     static let lightSeeGreenColor = Color(red: 178/255, green: 175/255, blue: 229/255)
+    static let lightPink = Color(red: 221/255, green: 166/255, blue: 182/255)
     
     static let topFrameSize = CGSize(width: 75, height: 24)
     static let tabbarHeight = CGFloat(49)

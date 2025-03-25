@@ -79,12 +79,19 @@ struct Cover: View {
                             }
                             
                             Button(action: {
-                                path.append("Settings")
                                 navBarState.isHidden = true
                                 //viewName = "Settings"
                                 //isNavigate = true
                             }) {
-                                Label("Settings", systemImage: "gearshape")
+                                Label("Bulk Edit", systemImage: "rectangle.and.pencil.and.ellipsis")
+                            }
+                            
+                            Button(action: {
+                                navBarState.isHidden = true
+                                //viewName = "Settings"
+                                //isNavigate = true
+                            }) {
+                                Label("Undo Changes", systemImage: "arrow.uturn.backward")
                             }
                         }
                         label: {

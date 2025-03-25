@@ -18,7 +18,7 @@ struct SearchView: View {
     @State private var events = ["Birthday", "Eid", "Convocation", "Independence Day"]
 
     @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 30.3753, longitude: 69.3451), // Default to San Francisco
+        center: CLLocationCoordinate2D(latitude: 33.6995, longitude: 73.0363), // Default to San Francisco
         span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
     )
     

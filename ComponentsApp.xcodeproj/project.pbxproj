@@ -27,6 +27,8 @@
 		18E446E22CD741FD005A1BDA /* Cover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E446DA2CD741FD005A1BDA /* Cover.swift */; };
 		18E446E32CD741FD005A1BDA /* Cover2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E446DB2CD741FD005A1BDA /* Cover2.swift */; };
 		18E446EB2CD78201005A1BDA /* Cover3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E446EA2CD78201005A1BDA /* Cover3.swift */; };
+		18F068C62D902031001A945D /* EditPersonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F068C52D902031001A945D /* EditPersonCardView.swift */; };
+		18F068C82D90213E001A945D /* DetailsPersonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F068C72D90213E001A945D /* DetailsPersonCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		18E446DA2CD741FD005A1BDA /* Cover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cover.swift; sourceTree = "<group>"; };
 		18E446DB2CD741FD005A1BDA /* Cover2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cover2.swift; sourceTree = "<group>"; };
 		18E446EA2CD78201005A1BDA /* Cover3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cover3.swift; sourceTree = "<group>"; };
+		18F068C52D902031001A945D /* EditPersonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonCardView.swift; sourceTree = "<group>"; };
+		18F068C72D90213E001A945D /* DetailsPersonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPersonCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -178,6 +182,8 @@
 				187FFC752CD6940B00C45960 /* TextComponent.swift */,
 				18E446EA2CD78201005A1BDA /* Cover3.swift */,
 				189EB13D2D58FD550057828C /* RadioButton.swift */,
+				18F068C52D902031001A945D /* EditPersonCardView.swift */,
+				18F068C72D90213E001A945D /* DetailsPersonCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -337,9 +343,11 @@
 				182EF1152C8601EE003C7825 /* ButtonComponent.swift in Sources */,
 				187FFC762CD6940B00C45960 /* TextComponent.swift in Sources */,
 				187FFC642CD6738C00C45960 /* ImageCard.swift in Sources */,
+				18F068C82D90213E001A945D /* DetailsPersonCardView.swift in Sources */,
 				1838187F2CD64A1000C0517F /* BottomNavBar.swift in Sources */,
 				189EB13E2D58FD550057828C /* RadioButton.swift in Sources */,
 				182EF1172C8603C3003C7825 /* CardView.swift in Sources */,
+				18F068C62D902031001A945D /* EditPersonCardView.swift in Sources */,
 				182EF11D2C864899003C7825 /* TextFieldCustom.swift in Sources */,
 				18B5D20C2C873F4C00F874D1 /* CustomTabBar.swift in Sources */,
 				182EF0E82C85EC1C003C7825 /* ComponentsAppApp.swift in Sources */,

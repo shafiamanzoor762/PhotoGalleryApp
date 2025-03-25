@@ -1,67 +1,69 @@
-//
-//  DateView.swift
-//  ComponentsApp
-//
-//  Created by apple on 02/11/2024.
-//
 
 import SwiftUI
 
 struct DateView: View {
-//    var body: some View {
-//        ScrollView {
-//            //Text("This is the home screen")
-//            LazyVGrid(columns: [
-//                GridItem(.flexible()),
-//                GridItem(.flexible()),
-//                GridItem(.flexible())
-//            ], spacing: 20) {
-//                // Add your CardViews here
-//                ForEach(0..<10) { index in
-//                    NavigationLink(destination: PicturesView(), label: {
-//                        CardView(title: "Card Title \(index + 1)", content: "\(index + 1)")
-//                            .padding(.top, -10)
-//                    })
-//                }
-//            }.frame(maxWidth: .infinity, maxHeight: .infinity)
-//            .padding()
-//        }
-//    }
     @State private var selectedIndex: Int? = nil
+    @EnvironmentObject var navManager: NavManager  // Access nav state
+    @State private var image = ImgesData.imagesDetail
+
+    private func getSelectedImages() -> [ImageeDetail] {
+        var images: [ImageeDetail] = []
+        if image.indices.contains(5) {
+            images.append(image[5])
+        }
+        if image.indices.contains(6) {
+            images.append(image[6])
+        }
+        return images
+    }
 
     var body: some View {
-        NavigationStack {
+        let selectedImages = getSelectedImages()  // Compute outside the loop to improve performance
+        
+        return NavigationStack {
             ScrollView {
                 LazyVGrid(columns: [
                     GridItem(.flexible()),
                     GridItem(.flexible()),
                     GridItem(.flexible())
                 ], spacing: 20) {
-                    ForEach(0..<10, id: \.self) { index in
+                    ForEach(Array(image.enumerated()), id: \.element.Id) { index, img in
+                        
                         NavigationLink(
                             tag: index,
                             selection: $selectedIndex
                         ) {
-                            PicturesView()
+                            PicturesView(screenName:  {
+                                let formatter = DateFormatter()
+                                formatter.dateFormat = "yyyy-MM-dd"
+                                return formatter.string(from: img.DateTaken)
+                            }()
+                                         , images: selectedImages)
                         } label: {
-                            CardView(title: "Card Title \(index + 1)", content: "\(index + 1)")
+                            if img.persons.count>0{
+                                CardView(
+                                    title: {
+                                        let formatter = DateFormatter()
+                                        formatter.dateFormat = "yyyy-MM-dd"
+                                        return formatter.string(from: img.DateTaken)
+                                    }(),
+                                    content: "\(index + 1)",
+                                    imageURL: img.Path
+                                )
+                                
                                 .padding(.top, -10)
                                 .contentShape(Rectangle())
                                 .onTapGesture {
                                     print("Card \(index + 1) tapped")
                                     selectedIndex = index
                                 }
+                            }
                         }
                         .buttonStyle(PlainButtonStyle())
                     }
                 }
                 .padding()
             }
-            //.navigationTitle("People View")
         }
     }
-}
-
-#Preview {
-    DateView()
 }

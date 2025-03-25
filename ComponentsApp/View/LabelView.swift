@@ -7,7 +7,7 @@ struct LabelView: View {
             GridItem(.flexible()),
             GridItem(.flexible())
         ]
-    @State var imageList = [Imagee]()
+    @State var imageList = ImgesData.imagesDetail
     
     var body: some View {
         ScrollView {
@@ -16,7 +16,6 @@ struct LabelView: View {
                 // Add your CardViews here
                 ForEach(imageList, id:\.self.Id) { img in
                     ImageCard(ImageURL: img.Path)
-                        
                 }
             }.frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding()
